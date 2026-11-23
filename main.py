@@ -17,7 +17,6 @@ BASE_DIR = Path(__file__).parent
 
 MODEL_PATH = BASE_DIR / "models" / "xgboost_model.json"
 FEATURES_PATH = BASE_DIR / "models" / "features.json"
-CSV_PATH = BASE_DIR / "data" / "realtime.csv" # File 10 dòng
 
 # ===============================================================
 # 2. LOAD MODEL VÀ FEATURES
@@ -26,8 +25,6 @@ if not MODEL_PATH.exists():
     raise RuntimeError(f"Không tìm thấy model tại: {MODEL_PATH}")
 if not FEATURES_PATH.exists():
     raise RuntimeError(f"Không tìm thấy file features tại: {FEATURES_PATH}")
-if not CSV_PATH.exists():
-    raise RuntimeError(f"Không tìm thấy file data tại: {CSV_PATH}")
 
 booster = xgb.Booster()
 booster.load_model(str(MODEL_PATH))

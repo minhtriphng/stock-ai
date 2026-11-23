@@ -21,6 +21,14 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 
+## Bước 3.1: Chạy tạo features để lấy dữ liệu mới nhất
+
+python src/features.py
+
+## Bước 3.2: Chạy train model với dữ liệu mới tạo
+
+python src/xgboost_train.py
+
 ## Bước 4: Chạy local
 
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
