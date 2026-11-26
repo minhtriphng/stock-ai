@@ -15,6 +15,8 @@ xgb_features = [
     'DAX',
     'Nasdaq_Futures',
     'Hangseng',
+    # 'Daily_Mean_Sentiment',
+    # 'News_Count'
 ]
 
 
